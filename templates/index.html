@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadiyo Data Ventures</title>
+    <link rel="icon" href="static/favicon.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('static/stocks.png'); /* Replace 'background_image.jpg' with the path to your image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+        }
+        /* Styles for the form container */
+        .container {
+            max-width: 400px;
+            margin: 50px auto; /* Added margin to the top */
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles for the form headings */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Styles for the form labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Styles for the input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styles for the submit button */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for the submit button */
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="open">Opening Price (in Rupees):</label>
+            <input type="text" id="open" name="open" required><br><br>
+            
+            <label for="high">Highest Price (in Rupees):</label>
+            <input type="text" id="high" name="high" required><br><br>
+            
+            <label for="low">Lowest Price (in Rupees):</label>
+            <input type="text" id="low" name="low" required><br><br>
+            
+            <label for="volume">Trading Volume:</label>
+            <input type="text" id="volume" name="volume" required><br><br>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
